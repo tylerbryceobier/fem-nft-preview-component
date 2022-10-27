@@ -1,0 +1,233 @@
+/* Font Family @import For Project */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+/* Primary Colors Used */
+  
+    --blue-soft: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%); 
+    --cyan-overlay: rgba(0, 255, 247, 0.5); 
+
+/* Neutral Colors */
+    
+    --dark-blue-main: hsl(217, 54%, 11%);
+    --dark-blue-card: hsl(216, 50%, 16%);
+    --dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+/* Typography */
+
+    --font-size-para: 1.125rem;
+    --font-family: 'Outfit', sans-serif;
+
+/* Typography Font Weight Utils */
+
+    --w-300: 300;
+    --w-400: 400;
+    --w-600: 600;
+
+}
+
+body
+{
+    background-color: var(--dark-blue-main);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+body p
+{
+    font-size: var(--font-size-para);
+}
+
+/* Document Wrapper */
+
+.container
+{
+    width: 100vw;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Card Styles */
+
+.card
+{
+    width: 18.75rem;   
+    height: auto;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 1.5625rem; 
+    background-color: var(--dark-blue-card);
+}
+.card__image
+{
+    position: relative;
+}
+.card__image > img 
+{
+    width: 15.625rem;
+    height: 15.625rem;
+    margin-top: 1.25rem;
+    margin-left: 1.5625rem;
+    border-radius: 0.625rem;
+}
+.image__overlay
+{
+    background: var(--cyan);
+    height: 15.625rem;
+    width: 15.625rem;
+    position: absolute;
+    top: 0;
+    background-color: var(--cyan-overlay); 
+    left: 0;
+    border-radius: 0.625rem;
+    margin-top: 1.25rem;
+    margin-left: 1.5625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .15s ease-in-out;   
+}
+.image__overlay:hover
+{
+    opacity: 1; 
+} 
+
+/* Card Body Styles */
+
+.card__body
+{
+    padding: 1.5625rem; 
+}
+
+.card__name > a
+{
+    color: var(--white);
+    text-decoration: none;   
+    font-weight: var(--w-600);
+    font-size: 1.125rem;
+    transition: color .2s ease-in;      
+}
+.card__name > a:hover
+{
+    color: var(--cyan);
+}
+
+.card__desc
+{
+    color: var(--blue-soft);
+    font-weight: var(--w-300); 
+}
+
+/* Card Details Styles */
+
+
+/* Styles For icons And icon text */
+
+.icon
+{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.icon > .icon__text
+{
+    vertical-align: top;
+}
+
+.card__details
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    font-size: 0.875rem;
+    position: relative;
+    top: 0.625rem;   
+}
+
+.details__name > .icon__text
+{
+    color: var(--cyan);
+    font-weight: var(--w-600);
+}
+
+.details__date > .icon__text
+{
+    color: var(--blue-soft);
+}
+
+/* Divider Styles */
+
+.divider
+{  
+    background: transparent;
+    border-top: 0.0625rem solid var(--dark-blue-line);
+    margin: 0.3125rem 1.5625rem;          
+}
+
+/* Card Author Styles & Footer Styles */
+
+// .card__footer
+// {
+//     // display: flex;
+//     // justify-content: flex-start; 
+// }
+
+// .card__author
+// {
+//     // align-items: center;
+//     // text-align: center; 
+// }
+.card__footer
+{
+    padding: 0.625rem; 
+}
+
+.card__author
+{
+    display: flex;
+    position: relative;
+    top: -5px;   
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0.9375rem;       
+}
+
+.card__author > .icon > img
+{
+    height: 1.75rem;
+    width: 1.75rem; 
+    border-radius: 50%; 
+    border: 1px solid var(--white);
+}
+
+.card__author > .icon__text > p
+{
+    font-size: 0.9375rem;  
+    font-weight: var(--w-300);
+    margin-left: 10px;
+    color: var(--blue-soft);
+    word-spacing: 3px;  
+    & a
+    {
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    & a:hover
+    {
+        color: var(--cyan);
+        transition: color .2s ease-in;      
+    }
+}

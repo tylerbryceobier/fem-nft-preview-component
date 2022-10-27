@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="public/css/app.css">
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <!-- 
+  
+  Equilibrium #3429
+
+  Our Equilibrium collection promotes balance and calm.
+
+  0.041 ETH
+  3 days left
+  
+  Creation of Jules Wyvern 
+  
+  -->
+
+
+  <div class="container">
+    <main class="card">
+      <section class="card__image">
+        <img src="public/images/image-equilibrium.jpg" alt="...">
+        <div class="image__overlay">
+          <object data="public/images/icon-view.svg" type="image/svg+xml"></object>
+        </div>
+      </section>
+      <div class="card__body">
+        <section class="card__info">
+          <div class="card__name">
+            <a href="#">Equilibrium #3429</a>
+          </div>
+          <div class="card__desc">
+            <p>Our Equilibrium collection promotes balance and calm.</p>
+          </div>
+        </section>
+        <section class="card__details">
+          <div class="details__name">
+            <span class="icon">
+              <img src="public/images/icon-ethereum.svg" alt="...">
+            </span>
+            <span class="icon__text">
+              0.041ETH 
+            </span>
+          </div>
+          <div class="details__date">
+            <span class="icon">
+              <img src="public/images/icon-clock.svg" alt="...">
+            </span>
+            <span class="icon__text">
+              3 days left
+            </span>
+          </div>
+        </section>
+      </div>
+      <div class="divider"></div>
+      <section class="card__footer">
+        <div class="card__author">
+          <span class="icon">
+            <img src="public/images/image-avatar.png" class="icon" alt="...">
+          </span>
+          <span class="icon__text">
+            <p class="icon__text">Creation of <a href="#" class="author__name">Jules Wyvern</a></p>
+          </span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
